@@ -1,7 +1,5 @@
 import Phaser from 'phaser';
-import Level from './assets/canvas/Level';
-import Gameover from './assets/canvas/gameover';
-import Victory from './assets/canvas/victory';
+import BaseState from './states/BaseState';
 
 export default class Game extends Phaser.Game {
   constructor() {
@@ -16,11 +14,10 @@ export default class Game extends Phaser.Game {
     // this.state.add("Boot", Boot);
     // this.state.add("Menu", Menu);
     // this.state.add("Preload", Preload);
-    this.state.add('Level', Level);
-    this.state.add('gameover', Gameover);
-    this.state.add('victory', Victory);
+    // this.state.add('sandbox', sandbox);
+    this.state.add('BaseState', BaseState);
 
-    this.state.start('Level');
+    this.state.start('BaseState');
   }
 }
 
