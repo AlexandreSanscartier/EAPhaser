@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
 import BaseClassConstructedError from '../Errors/BaseClassConstructedError';
-import MethodNotImplementedError from '../Errors/MethodNotImplementedError';
 
 export default class BaseState extends Phaser.State {
   constructor() {
@@ -10,25 +9,11 @@ export default class BaseState extends Phaser.State {
     }
   }
 
-  /*eslint-disable */
-  load() {
-    throw new MethodNotImplementedError();
+  setStateName(stateName) {
+    this.stateName = stateName;
   }
 
-  init() {
-    throw new MethodNotImplementedError();
+  getStateName() {
+    return this.stateName;
   }
-
-  create() {
-    throw new MethodNotImplementedError();
-  }
-
-  render() {
-    throw new MethodNotImplementedError();
-  }
-
-  update() {
-    throw new MethodNotImplementedError();
-  }
-  /* eslint-enable */
 }

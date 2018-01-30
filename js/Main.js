@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import BaseState from './states/BaseState';
+import Sandbox from './states/Sandbox';
 
 export default class Game extends Phaser.Game {
   constructor() {
@@ -15,9 +15,9 @@ export default class Game extends Phaser.Game {
     // this.state.add("Menu", Menu);
     // this.state.add("Preload", Preload);
     // this.state.add('sandbox', sandbox);
-    this.state.add('BaseState', BaseState);
+    this.state.add('sandbox', Sandbox);
 
-    this.state.start('BaseState');
+    this.state.start('sandbox');
   }
 }
 
