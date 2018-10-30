@@ -3,7 +3,7 @@ module.exports = {
     "rules": {
         "comma-dangle": 0,
         "no-plusplus": 0,
-        "no-console": 0
+        "no-console": 0,
     },
     "env": {
         "browser": true
